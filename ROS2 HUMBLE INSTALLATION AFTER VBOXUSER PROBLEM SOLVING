@@ -1,0 +1,20 @@
+UPDATE AND UPGRADE
+    sudo apt update && sudo apt upgrade -y
+
+INSTALL DEPENDENCIES
+    sudo apt install curl gnupg lsb-release -y
+
+ADD ROS2 REPOSITORY
+    sudo curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc -o /usr/share/keyrings/ros-archive-keyring.gpg
+    echo "deb [signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/ros2.list > /dev/null
+
+INSTALL ROS2 HUMBLE
+    sudo apt update
+    sudo apt install ros-humble-desktop -y
+
+SETUP ENV
+    echo "source /opt/ros/humble/setup.bash" >> ~/.bashrc
+    source ~/.bashrc
+
+VERIFY INSTALLATION
+    ros2 doctor --report
