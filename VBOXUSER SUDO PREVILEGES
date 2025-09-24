@@ -1,0 +1,16 @@
+SWITCH TO ROOT
+    su -
+ONCE ROOT, RUN 
+    usermod -aG sudo vboxuser
+CAN ALSO USE 
+    whoami
+    (or) sudo whoami
+EXIT
+    exit
+WHO AM I
+    whoami
+IT SHOULD RETURN TO ROOT. IF IT DOES NOT GET RID OF THE PROBLEM, JUST RESTART THE VM, THEN
+    sudo whoami
+IF OK, IT WILL ASK FOR PASSWORD AND RETURN
+    root
+CARRY ON WITH INSTALLATION
