@@ -1,0 +1,2 @@
+FIRST COMMAND TO RUN IN EVERY TERMINAL
+    source /opt/ros/humble/setup.bash
