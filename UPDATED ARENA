@@ -1,0 +1,156 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <world name="arena_world">
+
+    <!-- Light and physics -->
+    <include>
+      <uri>model://sun</uri>
+    </include>
+    <gravity>0 0 -9.8</gravity>
+
+    <!-- Ground plane (9m x 5m) -->
+    <model name="ground">
+      <static>true</static>
+      <link name="ground_link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>9 5 0.1</size>
+            </box>
+          </geometry>
+          <pose>4.5 2.5 -0.05 0 0 0</pose>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>9 5 0.1</size>
+            </box>
+          </geometry>
+          <pose>4.5 2.5 -0.05 0 0 0</pose>
+          <material>
+            <ambient>0.7 0.7 0.7 1</ambient>
+            <diffuse>0.7 0.7 0.7 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Starting Zone (green box, 2m x 2m) -->
+    <model name="start_zone">
+      <static>true</static>
+      <link name="link">
+        <visual name="visual">
+          <geometry>
+            <box><size>2 2 0.01</size></box>
+          </geometry>
+          <pose>1 1 0 0 0 0</pose>
+          <material>
+            <ambient>0 1 0 0.5</ambient>
+            <diffuse>0 1 0 0.5</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Excavation Zone (blue, 4m x 2m) -->
+    <model name="excavation_zone">
+      <static>true</static>
+      <link name="link">
+        <visual name="visual">
+          <geometry>
+            <box><size>4 2 0.01</size></box>
+          </geometry>
+          <pose>7 1 0 0 0 0</pose>
+          <material>
+            <ambient>0 0 1 0.4</ambient>
+            <diffuse>0 0 1 0.4</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Construction Zone (red box, 2.6m x 2m) -->
+    <model name="construction_zone">
+      <static>true</static>
+      <link name="link">
+        <visual name="visual">
+          <geometry>
+            <box><size>2.6 2 0.01</size></box>
+          </geometry>
+          <pose>7.7 4 0 0 0 0</pose>
+          <material>
+            <ambient>1 0 0 0.4</ambient>
+            <diffuse>1 0 0 0.4</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Rocks (blue cylinders, radius 0.2m) -->
+    <model name="rock1">
+      <static>true</static>
+      <link name="link">
+        <visual name="visual">
+          <geometry>
+            <cylinder><radius>0.2</radius><length>0.2</length></cylinder>
+          </geometry>
+          <pose>3 2.5 0.1 0 0 0</pose>
+          <material>
+            <ambient>0 0 1 1</ambient>
+            <diffuse>0 0 1 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="rock2">
+      <static>true</static>
+      <link name="link">
+        <visual name="visual">
+          <geometry>
+            <cylinder><radius>0.2</radius><length>0.2</length></cylinder>
+          </geometry>
+          <pose>5 1.5 0.1 0 0 0</pose>
+          <material>
+            <ambient>0 0 1 1</ambient>
+            <diffuse>0 0 1 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Craters (brown cylinders, radius 0.25m, lowered) -->
+    <model name="crater1">
+      <static>true</static>
+      <link name="link">
+        <visual name="visual">
+          <geometry>
+            <cylinder><radius>0.25</radius><length>0.1</length></cylinder>
+          </geometry>
+          <pose>2 3 0 0 0 0</pose>
+          <material>
+            <ambient>0.6 0.3 0 1</ambient>
+            <diffuse>0.6 0.3 0 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="crater2">
+      <static>true</static>
+      <link name="link">
+        <visual name="visual">
+          <geometry>
+            <cylinder><radius>0.25</radius><length>0.1</length></cylinder>
+          </geometry>
+          <pose>8 3.5 0 0 0 0</pose>
+          <material>
+            <ambient>0.6 0.3 0 1</ambient>
+            <diffuse>0.6 0.3 0 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+  </world>
+</sdf>
