@@ -1,0 +1,10 @@
+TERMINAL 1 :
+cd ~/caterpillar_ws
+source install/setup.bash
+ros2 launch gazebo_ros gazebo.launch.py
+
+
+TERMINAL 2 :
+cd ~/caterpillar_ws
+source install/setup.bash
+ros2 launch four_wheel_bot2 spawn_four_wheel_bot2.launch.py
