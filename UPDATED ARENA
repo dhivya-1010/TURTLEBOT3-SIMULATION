@@ -86,7 +86,7 @@
       </link>
     </model>
 
-    <!-- Rocks (blue cylinders, radius 0.2m) -->
+    <!-- Rocks the (blue cylinders, radius 0.2m) -->
     <model name="rock1">
       <static>true</static>
       <link name="link">
