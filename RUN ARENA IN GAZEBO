@@ -1,0 +1,4 @@
+cd ~/caterpillar_ws
+colcon build --symlink-install
+source install/setup.bash
+gazebo ~/caterpillar_ws/src/caterpillar_bot/worlds/arena.world
